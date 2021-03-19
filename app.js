@@ -44,7 +44,10 @@ function deleteItem(event) {
     //delete
     if (item.classList[0] === "trash-btn") {
     const toDo = item.parentElement;
-    toDo.remove()
+    toDo.classList.add("deleted");
+    toDo.addEventListener('transitionend', function() {
+        toDo.remove()
+    });
 }};
 
 //complete item from the list function
