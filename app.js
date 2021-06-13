@@ -96,7 +96,7 @@ function saveToDo(toDo) {
     } else {
         todos = JSON.parse(localStorage.getItem('todos'));
     };
-    todos.push(todo)
+    todos.push(toDo)
     localStorage.setItem('todos', JSON.stringify(todos));
 }
 
